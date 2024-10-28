@@ -7,7 +7,34 @@
     <style>
       /* 1. Universal Selector */
 
+      /* 
+      - This selector indicating by the " * " sign, we can use " body " or " html " as well, but the prefessional way is that to use the " * " symbol.
+
+      - This selector indicating that select everything on the webpage
+      
+      - This selector will be at the top very first in CSS
+      */
+
+      * {
+        /* its will remove all the margings on all the tags by automatically */
+        margin: 0;
+
+        /* its will remove all the paddings on all tags */
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
       /* 2. Type Selector */
+
+      /* - This is the type of selector in which we refer that which element or tag are selected to style that like h1,h2, p, form etc... */
+
+      p {
+        font-size: 16px;
+
+        /* we can give margin & padding in this way as well this works like as TRBL => Top Right Bottom Left */
+        margin: 20px 10px 20px 10px;
+      }
 
       /* 3. Class Selector */
 
