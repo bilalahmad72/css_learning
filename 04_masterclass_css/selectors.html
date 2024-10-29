@@ -27,34 +27,198 @@
 
       /* 2. Type Selector */
 
-      /* - This is the type of selector in which we refer that which element or tag are selected to style that like h1,h2, p, form etc... */
+      /* - This is the type of selector in which we refer that which element or tag are selected to style that example => h1,h2, p, form etc... */
 
       p {
         font-size: 16px;
+        margin-bottom: 10px;
 
         /* we can give margin & padding in this way as well this works like as TRBL => Top Right Bottom Left */
-        margin: 20px 10px 20px 10px;
+
+        /* if use only two values like 10px and 20px then its will mean that 10px top & bottom and 20px left & right */
+
+        /* margin: 10px 20px; */
+
+        /* we can use even 3 values as well that wwill mean first value will be top and 2nd value will be left right and third value is bottom */
+
+        /* margin: 20px 10px 20px 10px; */
+
+        /* padding: 10px 20px; */
       }
 
       /* 3. Class Selector */
 
+      /* 
+      - this is the type of selector in which we indicate the class to style that
+      
+      - class is indicate by the ( . ) sign 
+
+      - there are many tools exist that generate classes => Example ( tailwind css etc...)
+
+      */
+
+      .highlight {
+        background-color: orange;
+        padding: 16px;
+      }
+
       /* 4. ID Selector */
+
+      /* 
+      - this is the type of selector in which we style the tag that has id, 
+
+      - every element / tag should have a unique id. 
+
+      - id can be call by using the ( # ) symbol.
+      */
+
+      #header {
+        background-color: palevioletred;
+      }
 
       /* 5. Attribute Selector */
 
+      /* 
+
+      - () => paranthesis
+      - [] => Brackets 
+      - {} => Braces
+      
+      - This is the type of selector in which we can select the attribute of an element / tag.
+
+      - we can select any attribute by using the brackets []  with element / tag.
+
+      */
+
+      input[type="text"] {
+        border: 2px solid orange;
+        padding: 12px;
+      }
+
       /* 6. Descendant Selector */
+
+      /* 
+      
+      - this is the type of selector in which we select the descendent of an element / tag.
+
+      - It can be select by using the name of tag then space and descendent tag.
+
+      - like if tree like this body -> article -> p, then p is here the descent of the body.
+
+      - This one is very rarely used in now a days. around 80% developer don't use this.
+
+      */
+
+      article p {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-style: italic;
+      }
+
+      article div p {
+        background-color: rgb(181, 17, 17);
+      }
 
       /* 7. Child Selector */
 
+      /* 
+      
+      - This is the type of selector in which we select the only child of a tag / element.
+
+      - It can be select by using the parent tag name then ( > ) symbol and then child tag name 
+
+      */
+
+      div > p {
+        background-color: lawngreen;
+        padding: 12px;
+      }
+
       /* 8. Adjacent Sibling Selector */
+
+      /* 
+      
+      - This is the type selector that select the very next tag of himself. 
+
+      - Its select only one next tag that is sibling.
+
+      - It can be select by using the ( + ) symbol.
+      
+      */
+
+      h4 + p {
+        background-color: khaki;
+        margin-top: 12px;
+        padding: 10px;
+      }
 
       /* 9. General Sibling Selector */
 
+      /* 
+      
+      - This is the type of selector in which its select next all tags that are siblings 
+
+      - It can be select by using ( ~ ) symbol.
+      
+      */
+
+      h3 ~ p {
+        background-color: salmon;
+        padding: 10px;
+        margin-top: 12px;
+      }
+
       /* 10. Pseudo-class Selector */
+
+      /* 
+      
+      - This is the type of selector in which we select a tag to perform a little bit action on that, Example if i want that when hover on any text or button then its color or size changed. 
+
+      - It can be select by using the ( : ) sign.
+
+      */
+
+      a:hover {
+        background-color: orange;
+        color: black;
+        padding: 12px;
+        margin: 16px;
+        font-weight: 600;
+        font-style: italic;
+        text-decoration: none;
+        cursor: copy;
+      }
 
       /* 11. Pseudo-element Selector */
 
+      /* 
+      
+      - This can be select by using the ( :: ) sign.
+ 
+      */
+
+      p::first-letter {
+        font-size: 30px;
+        color: orange;
+      }
+
       /* 12. Grouping Selector */
+
+      /* 
+      
+      - This is the type of selector in which we can select the multiple tags elements at once and style that.
+
+      - It can be select by using the ( , ) sign.
+      
+      */
+
+      h1,
+      h2,
+      h3 {
+        color: rgb(75, 16, 237);
+      }
     </style>
   </head>
   <body>
@@ -76,15 +240,31 @@
 
     <article>
       <p>This paragraph inside an article, showing the descendent selector.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolorum
+        unde accusamus distinctio animi accusantium.
+      </p>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          fuga vel ea maiores. Voluptas, alias maxime. Dicta maiores quo
+          numquam.
+        </p>
+      </div>
     </article>
 
-    <ul>
-      <li>Direct child list item</li>
-      <li>Another direct child.</li>
-      <ul>
-        <li>This is not a direct child of first ul</li>
-      </ul>
-    </ul>
+    <div>
+      <p>I am a Child</p>
+      <p>I am a Child</p>
+      <section>
+        <p>I am a Descendant</p>
+      </section>
+      <p>I am a Child</p>
+    </div>
+
+    <h4>Adjustent Sibling</h4>
+    <p>This is adjustent sibling</p>
+    <p>This is the sibling</p>
 
     <h2>Sub Heading</h2>
 
@@ -99,6 +279,8 @@
 
     <a href="#"> Hover over me to see the pseudo-class selector in action.</a>
 
+    <br /><br />
+
     <p>
       This paragraph demonstrates psuedo-element selectors with a styled first
       line and first letter.
@@ -109,6 +291,11 @@
     <p>
       the headings h1, h2, h3 use the grouping selector for consistent font
       family.
+    </p>
+    <p>Lorem.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+      velit.
     </p>
   </body>
 </html>
