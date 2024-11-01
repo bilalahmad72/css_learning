@@ -1,0 +1,138 @@
+body {
+  background-color: #f7fcf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  font-family: "Outfit", sans-serif;
+}
+
+img {
+  height: 160px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #3e3e3e;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #3e3e3e;
+}
+
+.field-heading-data {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.c-label-data {
+  margin-bottom: 10px;
+  padding: 0;
+  color: #3e3e3e;
+  font-size: 16px;
+}
+
+.c-input-field {
+  width: 450px;
+  height: 20px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid white;
+  font-size: 16px;
+  color: #3e3e3e;
+  background-color: white;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.c-input-field::placeholder {
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+.c-input-field:focus {
+  border: 1px solid #51ac37;
+  outline: none;
+}
+
+.c-label-field {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.c-text-button {
+  background: none;
+  border: none;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: color 0.3s;
+}
+
+.c-text-button:hover {
+  color: #51ac37;
+}
+
+.c-custom-btn {
+  width: 450px;
+  padding: 16px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #51ac37;
+  color: white;
+  font-size: 16px;
+}
+
+.sub-title-text {
+  font-size: 12px;
+  color: #babbb2;
+}
+
+.passcode-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.passcode-field {
+  width: 50px;
+  height: 80px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 5px;
+  border: 1px solid white;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Add a focus effect */
+.passcode-field:focus {
+  border: 1px solid #51ac37;
+  outline: none;
+}
+
+.c-back-btn {
+  width: 450px;
+  padding: 16px 0;
+  border: 1px solid #51ac37;
+  border-radius: 8px;
+  background-color: #e0ebdd;
+  color: #3e3e3e;
+  font-size: 16px;
+}

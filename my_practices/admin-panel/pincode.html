@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pincode</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img src="images/img.png" alt="Logo Image" />
+
+    <div class="field-heading-data">
+      <h3>Passcode</h3>
+      <p class="sub-title-text">
+        We have sent you 6 digits OTP on your email address. Please enter the
+        code below.
+      </p>
+      <br />
+
+      <!-- pincode field -->
+      <form style="margin-bottom: 50px">
+        <div class="passcode-container">
+          <input
+            type="text"
+            maxlength="1"
+            class="passcode-field"
+            oninput="moveToNext(this, 'field2')"
+            id="field1"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="passcode-field"
+            oninput="moveToNext(this, 'field3')"
+            id="field2"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="passcode-field"
+            oninput="moveToNext(this, 'field4')"
+            id="field3"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="passcode-field"
+            oninput="moveToNext(this, 'field5')"
+            id="field4"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="passcode-field"
+            oninput="moveToNext(this, 'field6')"
+            id="field5"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="passcode-field"
+            oninput="moveToNext(this, null)"
+            id="field6"
+          />
+        </div>
+      </form>
+
+      <!-- next button -->
+      <button
+        class="c-custom-btn"
+        onclick="window.location.href='new_password.html'"
+      >
+        Next
+      </button>
+      <br />
+      <button
+        class="c-back-btn"
+        onclick="window.location.href='forgot_password.html'"
+      >
+        Back
+      </button>
+    </div>
+  </body>
+</html>
