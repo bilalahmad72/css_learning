@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class</title>
+
+    <style>
+      table {
+        border: 4px solid rgb(55, 47, 47);
+        border-collapse: collapse;
+      }
+
+      caption {
+        caption-side: bottom;
+        padding: 10px;
+        font-weight: 300;
+        font-size: 16px;
+        color: red;
+        text-transform: capitalize;
+        text-overflow: ellipsis;
+        text-shadow: 2px 3px 10px black;
+      }
+
+      thead {
+        background-color: orange;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 12px 32px;
+      }
+
+      .table-data-row {
+        background-color: salmon;
+        font-weight: 400;
+        color: rgb(57, 35, 35);
+      }
+
+      th:hover {
+        background-color: red;
+      }
+
+      td:hover {
+        background-color: lightsalmon;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+      td:nth-child(even) {
+        background-color: maroon;
+        color: white;
+      }
+
+      td:first-child {
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      td:last-child {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is the first heading</h1>
+    <h2>This is the 2nd heading</h2>
+    <table>
+      <caption>
+        This is my table
+      </caption>
+      <thead>
+        <tr>
+          <th>First</th>
+          <th>Second</th>
+          <th>Third</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="table-data-row">
+          <td>Pakistan</td>
+          <td>India</td>
+          <td>Australia</td>
+        </tr>
+        <tr class="table-data-row">
+          <td>Pakistan</td>
+          <td>India</td>
+          <td>Australia</td>
+        </tr>
+        <tr class="table-data-row">
+          <td>Pakistan</td>
+          <td>India</td>
+          <td>Australia</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
