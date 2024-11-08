@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* To add any custom google fonts, go to google font website and click on fonts then click on get font button and then embed the code as link or import it. after that change the property of font-family inside html or body style */
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+.container {
+  background: linear-gradient(135deg, red, blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  /* width: 90%; */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
+}
+
+h1 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  margin-bottom: 12px;
+}
+
+#notify-form button {
+  background-color: rgb(161, 5, 161);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 5px 5px 24px red;
+
+  /* this will put transition on backgroud color and font size when hover on it */
+  transition: background-color, font-size 0.5s ease-in-out;
+}
+
+#notify-form button:hover {
+  background-color: rgb(33, 2, 33);
+  font-size: 20px;
+}
+
+svg {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(1) scaleY(1);
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+svg:hover {
+  background-color: rgba(156, 5, 139, 0.678);
+  transform: scaleX(1.3) scaleY(1.3);
+}
+
+.container_new {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_new div {
+  background-color: khaki;
+  color: black;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 30px orange;
+  transition: background-color 0.5s ease-in-out, font-size 0.5s ease-in-out,
+    height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.container_new div:hover {
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  height: 120px;
+  width: 120px;
+}
