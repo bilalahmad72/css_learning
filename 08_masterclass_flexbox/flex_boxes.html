@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Boxes</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        background-color: rgba(228, 228, 227, 0.875);
+        margin: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5px;
+      }
+
+      h1,
+      h2 {
+        color: #333333;
+      }
+
+      .container {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: white;
+      }
+
+      .flex-container {
+        display: flex;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+
+      .circle {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .one {
+        background-color: rgba(231, 185, 100, 0.761);
+      }
+
+      .two {
+        background-color: rgba(90, 230, 230, 0.852);
+      }
+
+      .three {
+        background-color: rgba(79, 235, 183, 0.842);
+      }
+
+      .four {
+        background-color: rgba(131, 227, 67, 0.781);
+      }
+
+      .five {
+        background-color: rgba(246, 248, 97, 0.77);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is the Master class of Flexbox</h1>
+
+    <!-- When we move with Flexbox two main things need to remember ( Main Axis & Other Axis ) -->
+
+    <!-- In the world of web when we use Flexbox then main axis will be from left to right -->
+
+    <!-- Flex Row -->
+    <div class="container">
+      <h2 class="heading-title">1. Default Flex (row)</h2>
+      <div class="flex-container">
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+      </div>
+    </div>
+
+    <!-- Flex Column -->
+
+    <div class="container">
+      <h2 class="heading-title">2. Flex Direction ( Column )</h2>
+      <div class="flex-container" style="flex-direction: column">
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+      </div>
+    </div>
+
+    <!-- Justify Content Space Between -->
+    <div class="container">
+      <h2 class="heading-title">3. Justity Content ( Space-Between )</h2>
+      <div class="flex-container" style="justify-content: space-between">
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+      </div>
+    </div>
+
+    <!-- Align Items Center -->
+    <div class="container">
+      <h2 class="heading-title">4. Align Items ( Center )</h2>
+      <div class="flex-container" style="align-items: center">
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+      </div>
+    </div>
+
+    <!-- Align Items & Justify Content Center -->
+    <div class="container">
+      <h2 class="heading-title">5. Align Items & Justify Content ( Center )</h2>
+      <div
+        class="flex-container"
+        style="align-items: center; justify-content: center"
+      >
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+      </div>
+    </div>
+
+    <!-- Flex Box Wrap -->
+    <div class="container">
+      <h2 class="heading-title">6. Flex Wrap ( Wrap )</h2>
+      <div class="flex-container" style="flex-wrap: wrap; height: auto">
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+        <div class="circle one">6</div>
+        <div class="circle two">7</div>
+        <div class="circle three">8</div>
+        <div class="circle four">9</div>
+        <div class="circle five">10</div>
+      </div>
+    </div>
+
+    <!-- Align Content: Space-Around ( with Wrap ) -->
+    <div class="container">
+      <h2 class="heading-title">
+        7. Align Content: Space-Around ( with Wrap )
+      </h2>
+      <div
+        class="flex-container"
+        style="flex-wrap: wrap; align-content: space-around"
+      >
+        <div class="circle one">1</div>
+        <div class="circle two">2</div>
+        <div class="circle three">3</div>
+        <div class="circle four">4</div>
+        <div class="circle five">5</div>
+        <div class="circle one">6</div>
+        <div class="circle two">7</div>
+        <div class="circle three">8</div>
+        <div class="circle four">9</div>
+        <div class="circle five">10</div>
+      </div>
+    </div>
+
+    <!-- Order property -->
+    <div class="container">
+      <h2 class="heading-title">8. Order Property</h2>
+      <div class="flex-container">
+        <div class="circle one" style="order: 5">1</div>
+        <div class="circle two" style="order: 4">2</div>
+        <div class="circle three" style="order: 3">3</div>
+        <div class="circle four" style="order: 2">4</div>
+        <div class="circle five" style="order: 1">5</div>
+      </div>
+    </div>
+
+    <!-- Flex grow -->
+    <div class="container">
+      <h2 class="heading-title">9. Flex Grow</h2>
+      <div class="flex-container">
+        <div class="circle one" style="flex-grow: 1">1</div>
+        <div class="circle two" style="flex-grow: 3">2</div>
+        <div class="circle three" style="flex-grow: 2">3</div>
+        <div class="circle four" style="flex-grow: 5">4</div>
+        <div class="circle five" style="flex-grow: 2">5</div>
+      </div>
+    </div>
+
+    <!-- Align Self -->
+    <div class="container">
+      <h2 class="heading-title">10. Align Self</h2>
+      <div class="flex-container">
+        <div class="circle one" style="align-self: flex-start">1</div>
+        <div class="circle two" style="align-self: center">2</div>
+        <div class="circle three" style="align-self: flex-end">3</div>
+        <div class="circle four" style="align-self: center">4</div>
+        <div class="circle five" style="align-self: stretch; height: auto">
+          5
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
