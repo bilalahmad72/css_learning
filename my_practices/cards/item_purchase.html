@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Purchase</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /* background-color: #e4e4e4; */
+        background-color: black;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+      }
+
+      .image-container {
+        background-color: white;
+        height: 300px;
+        width: 280px;
+        border-radius: 16px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+
+      .image-container img {
+        height: 200px;
+      }
+
+      h2 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .style-text {
+        background-color: rgb(236, 236, 47);
+        font-weight: bold;
+        padding: 4px;
+        margin-bottom: 16px;
+      }
+
+      .buttons-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .btn-style {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 8px 24px;
+        border: 2px solid slateblue;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 16px;
+        transform: scaleX(1) scaleY(1);
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+      }
+
+      .btn-style:hover {
+        background-color: orange;
+        border: 2px solid white;
+        box-shadow: 2px 2px 30px #ffdf80;
+        transform: scaleX(1.1) scaleY(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image-container">
+        <img src="./images/shoes.png" alt="Shoe image" />
+      </div>
+      <h2>FUTURISTIC HC SHOE</h2>
+      <div class="style-text">COMING SOON</div>
+      <div class="buttons-row">
+        <button class="btn-style">BUY NOW</button>
+        <button class="btn-style">ADD TO CART</button>
+      </div>
+    </div>
+  </body>
+</html>
