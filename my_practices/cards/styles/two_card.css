@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeecf8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Merriweather", sans-serif;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid rgb(25, 132, 255);
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:nth-child(even) {
+  border: 1px solid rgb(244, 19, 244);
+}
+
+.icon-image {
+  background-color: rgb(25, 132, 255);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  font-size: 32px;
+  height: 60px;
+  width: 60px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.signin-btn {
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: rgba(25, 132, 255, 0.2);
+  color: rgb(25, 132, 255);
+  transform: scaleY(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.signin-btn:hover {
+  background-color: rgb(25, 132, 255);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.signin-btn-two {
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: rgba(244, 19, 244, 0.2);
+  color: rgb(244, 19, 244);
+  transform: scaleY(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.signin-btn-two:hover {
+  background-color: rgb(244, 19, 244);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 780px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
