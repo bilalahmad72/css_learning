@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      .nav-container {
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .nav-one {
+        background-color: #b5b1b1;
+        padding: 10px;
+      }
+
+      .nav-one ul {
+        /* this property is used to remove the dots from the list item */
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .nav-one li {
+        /* to add this is a good practice even through its does not create any effect but its good practice to make it inline */
+        display: flex;
+      }
+
+      .nav-one a {
+        text-decoration: none;
+        color: black;
+        /* background-color: orange; */
+        padding: 4px 16px;
+        border-radius: 4px;
+        position: relative;
+      }
+
+      .nav-one .login-btn {
+        background-color: orange;
+        border: none;
+        padding: 4px 16px;
+        color: black;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      .nav-one a::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(14, 76, 245);
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav-one a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav-two {
+        background-color: rgb(65, 165, 65);
+        padding: 20px;
+        width: 300px;
+      }
+
+      .nav-two ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .nav-two li {
+        margin-bottom: 16px;
+      }
+
+      .nav-two a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        width: 100%;
+      }
+
+      .nav-two a:hover {
+        background-color: green;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      .nav-two .login-btn {
+        background-color: rgb(5, 138, 5);
+        border: none;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .nav-two .login-btn:hover {
+        background-color: green;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav-three {
+        background-color: rgb(126, 204, 230);
+        padding: 20px;
+      }
+
+      .nav-three ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        /* this align the items from left to right ( X axis ) */
+        justify-content: space-around;
+
+        /* this align the items from top to bottom ( Y axis ) */
+        align-items: center;
+      }
+
+      .nav-three a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        display: block;
+      }
+
+      .nav-three .dropdown-content {
+        display: none;
+      }
+
+      .nav-three .dropdown:hover .dropdown-content {
+        display: block;
+        /* try with this and see the page, its shows the content inside your DOM */
+        /* position: relative; */
+
+        /* but position absolute show data outside of DOM */
+        position: absolute;
+        background-color: rgb(7, 151, 204);
+        width: 150px;
+        padding: 10px;
+      }
+
+      .nav-three .dropdown-content a {
+        margin-bottom: 10px;
+      }
+
+      .nav-three .dropdown-content a:hover {
+        background-color: rgb(2, 118, 164);
+        border-radius: 2px;
+      }
+
+      .nav-three .login-btn {
+        border: none;
+        background-color: rgb(7, 151, 204);
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-size: 14px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h2>Variation 1 Horizontal with underlined effects</h2>
+      <nav class="nav-one">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 2 Vertical with hover effects</h2>
+
+      <nav class="nav-two">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+        <button class="login-btn">Login</button>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 2 Horizontal with dropdowns</h2>
+
+      <nav class="nav-three">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#"> Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

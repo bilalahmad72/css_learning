@@ -1,0 +1,80 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: orange;
+  padding: 30px 0 30px 0;
+  width: 400px;
+  border-radius: 8px;
+}
+
+h1 {
+  color: white;
+  background-color: orange;
+  text-align: center;
+  margin: 0;
+}
+
+.field-label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container-class {
+  margin: 0 30px;
+}
+
+.field-box-class {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: none;
+  font-size: 12px;
+}
+
+.custom-button-class {
+  padding: 16px;
+  color: white;
+  margin-top: 16px;
+  background-color: black;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: transform 0.1s ease-in-out;
+}
+
+.custom-button-class:active {
+  transform: scale(0.95);
+}
+
+.action-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.action-text-btn {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
