@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #434f7a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.event-card {
+  padding: 24px;
+  border-radius: 50px;
+  width: 500px;
+  background-color: #333f6b;
+}
+
+.event-info {
+  padding: 50px 40px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.event-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #434f7a;
+  margin-bottom: 16px;
+}
+
+.event-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #132152;
+  max-width: 320px;
+  margin-bottom: 10px;
+}
+
+.event-location {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.icon {
+  color: #132152;
+}
+
+.location {
+  color: #132152;
+  font-weight: 600;
+}
+
+.images-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.images {
+  display: inline-flex;
+  align-items: center;
+}
+
+.images-btn img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin-right: -8px;
+  object-fit: cover;
+}
+
+.images-btn p {
+  margin-left: 16px;
+}
+
+.images-btn button {
+  background-color: #132152;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.images-btn button:hover {
+  transform: scaleX(1.02) scaleY(1.02);
+}
