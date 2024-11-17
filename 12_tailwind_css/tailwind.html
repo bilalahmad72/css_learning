@@ -1,0 +1,77 @@
+<!-- 
+
+A) First Way to use CDN for tailwind 
+
+Tailwind can be inject by using this script => 
+<script src="https://cdn.tailwindcss.com"></script>
+
+( but the problem is that its will not give suggestions of tailwind classes ). 
+
+
+B)  Second way to use the extension and some software installation
+
+First of all need to install the tailwind extension in VS Code or in your other code editor to get the suggestion of tailwind classes.
+
+Installation of software and Tailwind CLI into the project, here are the steps:
+
+1) node js
+
+check in terminal by running  ( node -v , npm -v )
+
+2) go to the https://tailwindcss.com and check the documentation of Tailwind CLI.
+
+3) open the terminal and run this command => 
+
+npm install -D tailwindcss 
+
+( -D mean is that for developer mode )
+
+4) then run this command 
+
+npx tailwindcss init
+
+these commands will auto generate some files into the project folder,
+
+5) open the " tailwind.config.css " file and do some settings 
+
+6) then replace the => content: [] with this
+
+content: ["./src/**/*.{html,js}"],
+
+its mean that under the home directory there is src folder and under that folder any file with extension html and js can follow this. 
+
+7) under the src folder create a new file " input.css "
+
+8) under input.css file put these lines
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+this will gives the warning at @tailwind we can ignore this in VS Code 
+
+9) then run this command 
+
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+
+its will auto generate a new file with " output.css " name.
+
+
+10) then under the index.html file of our project should need to add this link => 
+
+<link href="./output.css" rel="stylesheet">
+
+in this way the tailwind and its all classes will be working in project.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="text-2xl font-bold bg-slate-900 text-white p-5">Hello world!</h1>
+  </body>
+</html>
