@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Finder App</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .sticky-transition {
+        transition: background-color 0.3s ease;
+      }
+
+      .c-button {
+        color: gray;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 8px;
+        transition: 0.3s ease;
+      }
+
+      .c-button:hover {
+        background-color: #ffffff33;
+        color: white;
+        border-radius: 4px;
+      }
+
+      .content {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <!-- Sticky appbar -->
+    <div
+      id="appBar"
+      class="sticky top-0 bg-transparent grid grid-cols-12 h-16 p-4 sticky-transition items-center"
+    >
+      <!-- First column -->
+      <div class="col-span-2 flex items-center gap-2">
+        <img
+          src="https://www.aifinderplus.com/_next/image?url=%2Flogo.png&w=256&q=75"
+          alt="Logo"
+          class="h-6"
+        />
+        <div class="font-bold text-white text-lg">AiFinderPlus</div>
+      </div>
+      <!-- Buttons -->
+      <div class="col-span-8 flex items-center gap-2">
+        <button class="c-button">Search</button>
+        <button class="c-button">Category</button>
+        <button class="c-button">Tag</button>
+        <button class="c-button">Blog</button>
+        <button class="c-button">Pricing</button>
+        <button class="c-button">Submit</button>
+      </div>
+      <!-- Signin button and theme -->
+      <div class="col-span-2 flex items-center justify-center">
+        <!-- Button -->
+        <button
+          class="bg-orange-500 px-6 py-2 text-white rounded-full flex justify-center items-center text-sm hover:bg-orange-600"
+        >
+          <div>Sign In</div>
+          <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+        </button>
+        <!-- Icon -->
+        <i
+          class="fa-solid fa-moon text-white px-4 py-3 hover:bg-whiteTransparent rounded-lg"
+        ></i>
+      </div>
+    </div>
+
+    <!-- main content -->
+
+    <div class="content">
+      <!-- Follow me button -->
+      <div
+        class="text-white border-[0.1px] border-zinc-100 rounded-full flex flex-row px-4 py-1 hover:bg-whiteTransparent cursor-pointer text-sm"
+      >
+        🎊
+        <span class="ml-3">Follow Me </span>
+      </div>
+
+      <!-- space -->
+      <div class="h-12"></div>
+
+      <!-- heading -->
+      <div
+        class="flex flex-row justify-center items-center text-[48px] text-white"
+      >
+        <div>Find the Top AI Picks with</div>
+        <span class="ml-4"></span>
+        <div
+          class="bg-gradient-to-r from-blue-300 to to-blue-800 bg-clip-text text-transparent"
+        >
+          AI Finder Plus
+        </div>
+      </div>
+
+      <!-- space -->
+      <div class="h-10"></div>
+
+      <!-- description -->
+      <p class="text-gray-400 max-w-[700px] flex text-center text-lg leading-8">
+        AI Finder Plus is your go-to directory for discovering the latest and
+        most effective AI tools and resources, tailored to enhance your
+        productivity and expand your knowledge in the field of artificial
+        intelligence.
+      </p>
+
+      <!-- space -->
+      <div class="h-10"></div>
+
+      <!-- Search field -->
+
+      <div class="flex items-center min-w-[700px] min-h-[45px]">
+        <!-- Text Input -->
+        <div
+          class="border border-gray-500 rounded-l-lg focus-within:border-orange-500 w-full"
+        >
+          <input
+            type="text"
+            placeholder="Search any products you need"
+            class="bg-transparent text-gray-300 text-sm focus:outline-none px-4 min-h-[45px] w-full"
+          />
+        </div>
+
+        <!-- Search Button -->
+
+        <button class="bg-orange-500 text-white px-4 rounded-r-lg min-h-[47px]">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

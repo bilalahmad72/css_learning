@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Product Card</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a;
+        margin: 30px;
+      }
+
+      .container {
+        width: 350px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px #882342;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .container:hover {
+        box-shadow: 10px 8px 20px #989233;
+        transform: translateY(-10px);
+      }
+
+      .container .image img {
+        height: 250px;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+      }
+
+      .card-data {
+        padding: 30px 20px;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .rating {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .stars {
+        color: orange;
+        margin-right: 8px;
+      }
+
+      .rating p {
+        font-size: 14px;
+      }
+
+      .details {
+        font-size: 14px;
+        color: #1a1a1a;
+      }
+
+      .price-btn {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .price {
+        font-size: 16px;
+        font-weight: bold;
+        color: green;
+      }
+
+      .price-btn button {
+        padding: 8px 16px;
+        border-radius: 50px;
+        background-color: green;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .container:hover .price-btn button {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img
+          src="https://images.samsung.com/is/image/samsung/assets/in/explore/brand/5-best-android-mobile-phones-2022-in-india/banner-desktop-684x723-080422.jpg?$684_N_JPG$"
+          alt=""
+        />
+      </div>
+
+      <div class="card-data">
+        <div class="name">vivo x200 pro</div>
+        <div class="rating">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>(120 reviews)</p>
+        </div>
+        <div class="details">
+          Connectivity: Stay connected with the latest connectivity options on
+          the Vivo X200 Pro. Bluetooth 5.4, Dual SIM support, NFC, WiFi 6
+          (802.11ax), GPS (L1+L5), and Infrared capabilities ensure that you can
+          communicate and navigate seamlessly. Whether you're streaming music,
+          transferring files, or navigating your way around town, the Vivo X200
+          Pro has you covered.
+        </div>
+        <div class="price-btn">
+          <div class="price">$1299</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
