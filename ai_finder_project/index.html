@@ -17,7 +17,13 @@
       }
 
       .sticky-transition {
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+      }
+
+      .blurred {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(2px);
+        border-bottom: 1px solid rgba(255, 200, 244, 0.2);
       }
 
       .c-button {
@@ -47,7 +53,7 @@
     <!-- Sticky appbar -->
     <div
       id="appBar"
-      class="sticky top-0 bg-transparent grid grid-cols-12 h-16 p-4 sticky-transition items-center"
+      class="sticky top-0 bg-transparent grid grid-cols-12 h-20 p-4 sticky-transition items-center"
     >
       <!-- First column -->
       <div class="col-span-2 flex items-center gap-2">
@@ -125,7 +131,6 @@
       <div class="h-10"></div>
 
       <!-- Search field -->
-
       <div class="flex items-center min-w-[700px] min-h-[45px]">
         <!-- Text Input -->
         <div
@@ -144,6 +149,23 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
+
+      <!-- space -->
+      <div class="h-[600px]">asdasd</div>
     </div>
+
+    <!-- Script to detect the content is scrolled and make appbar blurred -->
+    <script>
+      const appBar = document.getElementById("appBar");
+
+      // Add scroll event listener
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          appBar.classList.add("blurred");
+        } else {
+          appBar.classList.remove("blurred");
+        }
+      });
+    </script>
   </body>
 </html>
