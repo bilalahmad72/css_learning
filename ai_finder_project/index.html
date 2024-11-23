@@ -38,6 +38,8 @@
         margin-top: 60px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
     </style>
   </head>
@@ -86,9 +88,61 @@
     <div class="content">
       <!-- Follow me button -->
       <div
-        class="text-white border-[0.5px] border-zinc-200 rounded-full px-2 py-1"
+        class="text-white border-[0.1px] border-zinc-100 rounded-full flex flex-row px-4 py-1 hover:bg-whiteTransparent cursor-pointer text-sm"
       >
-        Follow Me
+        🎊
+        <span class="ml-3">Follow Me </span>
+      </div>
+
+      <!-- space -->
+      <div class="h-12"></div>
+
+      <!-- heading -->
+      <div
+        class="flex flex-row justify-center items-center text-[48px] text-white"
+      >
+        <div>Find the Top AI Picks with</div>
+        <span class="ml-4"></span>
+        <div
+          class="bg-gradient-to-r from-blue-300 to to-blue-800 bg-clip-text text-transparent"
+        >
+          AI Finder Plus
+        </div>
+      </div>
+
+      <!-- space -->
+      <div class="h-10"></div>
+
+      <!-- description -->
+      <p class="text-gray-400 max-w-[700px] flex text-center text-lg leading-8">
+        AI Finder Plus is your go-to directory for discovering the latest and
+        most effective AI tools and resources, tailored to enhance your
+        productivity and expand your knowledge in the field of artificial
+        intelligence.
+      </p>
+
+      <!-- space -->
+      <div class="h-10"></div>
+
+      <!-- Search field -->
+
+      <div class="flex items-center min-w-[700px] min-h-[45px]">
+        <!-- Text Input -->
+        <div
+          class="border border-gray-500 rounded-l-lg focus-within:border-orange-500 w-full"
+        >
+          <input
+            type="text"
+            placeholder="Search any products you need"
+            class="bg-transparent text-gray-300 text-sm focus:outline-none px-4 min-h-[45px] w-full"
+          />
+        </div>
+
+        <!-- Search Button -->
+
+        <button class="bg-orange-500 text-white px-4 rounded-r-lg min-h-[47px]">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
     </div>
   </body>
