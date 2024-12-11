@@ -11,8 +11,308 @@
       * {
         padding: 0;
         margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: white;
+      }
+
+      .container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .stack-item {
+        position: absolute;
+      }
+
+      .bg {
+        height: 1020px;
+        width: 100vw;
+        background: linear-gradient(
+          to right top,
+          #d9d9d9,
+          #fff,
+          #fff,
+          #fff,
+          #fff,
+          #d9ecf6,
+          #daecf6
+        );
+      }
+
+      .field-area {
+        width: 504px;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .v-space {
+        height: 50px;
+      }
+
+      .sign-with {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+
+        align-items: center;
+      }
+
+      .sign-with .h-divider {
+        height: 2px;
+        width: 70px;
+        background-color: black;
+      }
+
+      .sign-with .h-space {
+        width: 30px;
+      }
+
+      .sign-with p {
+        font-weight: bold;
+        font-size: 16px;
+        color: #ffb7d5;
+      }
+
+      .auth-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      .a-button {
+        width: 100%;
+        height: 48px;
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .a-button:hover {
+        background-color: #abadff20;
+        border: 1px solid #abadff20;
+      }
+
+      .google-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .google-btn p {
+        font-size: 12px;
+        font-weight: 500;
+        color: #494949;
+      }
+      .fb-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .bf-btn p {
+        font-size: 12px;
+        font-weight: 500;
+        color: #494949;
+      }
+
+      .or-text {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .or-text p {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .name-email-field {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .field {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: start;
+        margin: 0;
+      }
+
+      .field label {
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+      }
+
+      .field input {
+        width: 100%;
+        border: 1px solid #e8e8e8;
+        background-color: #fafdff;
+        height: 40px;
+        border-radius: 8px;
+        padding-left: 12px;
+      }
+
+      .terms-condition {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 12px;
+      }
+
+      .terms-condition input[type="checkbox"] {
+        appearance: none;
+        border-radius: 4px;
+        height: 20px;
+        width: 20px;
+        background-color: #fafdff;
+        border: 1px solid #e3e3e3;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="checkbox"]:checked {
+        background-color: rgb(42, 166, 255);
+      }
+
+      .terms-condition p {
+        font-size: 14px;
+        font-weight: 400;
+        max-width: 350px;
+      }
+
+      .cirlce-btn {
+        height: 70px;
+        width: 70px;
+        border-radius: 40%;
+        background-color: #ffb7d5;
+      }
+
+      .grap {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        min-height: 850px;
+      }
+
+      .grap img {
+        height: 700px;
+        margin: 0;
+        padding: 0;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- gradient background -->
+      <div class="stack-item bg"></div>
+
+      <div class="stack-item grap">
+        <img src="./images/aa.svg" alt="graphic" />
+      </div>
+
+      <!-- register data -->
+      <div class="stack-item field-area">
+        <!-- heading -->
+        <h1>Sign up</h1>
+        <div class="v-space"></div>
+
+        <!-- divider & signin with text -->
+        <div class="sign-with">
+          <div class="h-divider"></div>
+          <div class="h-space"></div>
+          <p>Sign up with</p>
+        </div>
+
+        <!-- google and facebook btn -->
+        <div class="v-space"></div>
+        <div class="auth-buttons">
+          <button class="a-button google-btn">
+            <img src="./images/google.png" alt="Goolge Icon" height="24px" />
+            <div style="width: 10px"></div>
+            <p>Continue with Google</p>
+          </button>
+          <button class="a-button fb-btn">
+            <img src="./images/fb.png" alt="Goolge Icon" height="20px" />
+            <div style="width: 10px"></div>
+            <p>Continue with Facebook</p>
+          </button>
+        </div>
+
+        <!-- or text -->
+        <div style="height: 42px"></div>
+        <div class="or-text">
+          <p>Or</p>
+        </div>
+        <div style="height: 42px"></div>
+
+        <!-- form -->
+        <form>
+          <!-- name & email field -->
+          <div class="name-email-field">
+            <div class="field">
+              <label for="name">Name</label>
+              <div style="height: 12px"></div>
+              <input type="text" placeholder="Enter your name" />
+            </div>
+            <div class="field">
+              <label for="name">Email</label>
+              <div style="height: 12px"></div>
+              <input type="email" placeholder="Enter your email" />
+            </div>
+          </div>
+
+          <!-- Password field -->
+          <div style="height: 24px"></div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div style="height: 12px"></div>
+            <input type="password" placeholder="Enter your Password" />
+          </div>
+
+          <!-- terms & conditions -->
+          <div style="height: 24px"></div>
+          <div class="terms-condition">
+            <input type="checkbox" />
+            <p>
+              I’ve read and agree with terms of service and our privecy policy.
+            </p>
+          </div>
+
+          <!-- next btn -->
+          <div style="height: 24px"></div>
+          <div class="cirlce-btn"></div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

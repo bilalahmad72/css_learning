@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML Card Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      style="
+        position: relative;
+        width: 300px;
+        height: 450px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <!-- Image -->
+      <div>
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/rdia-33ace.firebasestorage.app/o/user_images%2F2bc768be-ae6b-42aa-a9e7-8334fbf9a2b8-2.jpg?alt=media&token=1b121211-67c7-47a3-96b2-84f92dcc0f65"
+          alt="User Image"
+          style="height: 450px; object-fit: cover"
+        />
+      </div>
+
+      <!-- Gradient Container -->
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 30px;
+          padding: 10px;
+          background: linear-gradient(to top right, #128d5b, #28a88c);
+          border-radius: 0 8px 8px 0;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        "
+      >
+        <p style="font-size: 14px; color: white; font-weight: 500; margin: 0">
+          I pledge to develop technologies in food for sustainable and resilient
+          food systems to achieve more than 50% self-sufficiency by 2040
+        </p>
+        <div style="margin-top: 10px">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/rdia-33ace.firebasestorage.app/o/user_signatures%2F13c58542-5ec2-45de-85a1-26506cdeed93.png?alt=media&token=bdad01ea-0c49-4bf6-91fe-140c7e9e3ff7"
+            alt="Signature"
+            style="width: auto; height: 40px"
+          />
+        </div>
+        <div
+          style="
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <span
+            style="
+              font-size: 12px;
+              color: white;
+              font-weight: 500;
+              margin-right: 5px;
+            "
+            >Khalid Alsinan</span
+          >
+          <span style="font-size: 12px; color: white; font-weight: 500"
+            >Chemical Engineer</span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
